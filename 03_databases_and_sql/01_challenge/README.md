@@ -1,16 +1,16 @@
-# Challenge 1: **SQL & Python**
+# チャレンジ1: **SQLとPython**
 
-## **Background & Objectives**
+## **背景と目的**
 
-This challenge aims to integrate SQL querying within Python code, enhancing your skills in database interaction through programming.
+このチャレンジの目的は、PythonコードでSQLクエリを使用し、プログラミングでデータベースを操作するスキルを磨くことです。
 
-## **Data**
+## **データ**
 
-We'll use the **`chinook.db`** database for this challenge. 
+このチャレンジでは **`chinook.db`** データベースを使用します。 
 
-We'll utilize Python's built-in library **`sqlite3`** to connect and interact with the **`chinook.db`** database.
+Pythonの組み込みライブラリ **`sqlite3`** を使用して **`chinook.db`** データベースに接続し、操作します。
 
-To connect to the **`chinook.db`** database from IPython or a Python script, run the following code in your challenge directory:
+IPythonまたはPythonスクリプトで **`chinook.db`** データベースに接続するには、チャレンジのディレクトリで次のコードを実行します。
 
 ```python
 import sqlite3
@@ -19,49 +19,49 @@ conn = sqlite3.connect('data/chinook.db')
 db = conn.cursor()
 db.execute("YOUR SQL QUERY")
 rows = db.fetchall()
-print(rows)  # => list (rows) of tuples (columns)
+print(rows)  # => タプル (列) のリスト (行)
 ```
 
-First, use DBeaver to connect to the **`data/chinook.db`** database and build/test your SQL queries. Then, integrate these queries into your Python code.
+まず、DBeaverを使用して **`data/chinook.db`** データベースに接続し、SQLクエリを作成してテストします。次に、これらのクエリをPythonコードに組み込みます。
 
-Each function in your **`queries.py`** file should take a **`db`** cursor connected to the database. Here's a template for your functions:
+**`queries.py`** ファイルの各関数には、データベースに接続した **`db`** カーソルを渡します。関数のテンプレートは次のようになります。
 
 ```python
 def your_function(db):
     query = ""
     db.execute(query)
     results = db.fetchall()
-    print(results)  # Inspect the results
+    print(results)  # 結果を確認する
     return ?
 ```
 
-When required, don’t forget to call items from a list, tuple or other structure in order to correctly returned the desired data. If an integer is expected, don’t return a different data type!
+目的のデータを適切に取得するために、リスト、タプルなどのデータ構造から必要に応じて要素を取得してください。整数を想定している場合に別のデータ型を返さないようにします。
 
-### **Number of Artists**
+### **アーティストの数**
 
-How many artists are in the database?
+データベースには何組のアーティストが登録されていますか。
 
-### **List of Artists**
+### **アーティストのリスト**
 
-What is the list of all artist names sorted alphabetically? Return a list of names (strings).
+すべてのアーティスト名をアルファベット順で並べ替えて、名前 (文字列) のリストを返してください。
 
-### **List of Albums About “Love”**
+### **「愛」をテーマにしたアルバムのリスト**
 
-Which albums have the word “love” in their title, sorted alphabetically? Return a list of album titles.
+タイトルに単語「love」を含むアルバムを取得し、アルファベット順に並べ替えたアルバムのタイトルを返してください。
 
-### **Number of Tracks Longer Than…**
+### **指定した時間より長い楽曲の数**
 
-How many tracks are longer than a duration specified by the user?
+ユーザーが指定した再生時間よりも長い楽曲はいくつありますか。
 
-### **List of Genres with Most Tracks**
+### **最も楽曲数が多いジャンルのリスト**
 
-Which genres have the most tracks? Return a list of genre names sorted by the number of tracks, descending.
+最も楽曲数が多いジャンルはどれですか。ジャンル名を楽曲数の降順で並べ替えたリストを返してください。
 
-## **Tips**
+## **ヒント**
 
-👉 Use parameter substitution to safeguard your SQL queries against SQL injection.
+👉 SQLクエリをSQLインジェクションから保護するには、パラメータ置換を使用します。
 
-👉 For long SQL queries, use triple quotes in Python for multi-line strings:
+👉 SQLクエリが長い場合、Pythonの三重引用符を使用して文字列を複数行で記述します。
 
 ```python
 query = """

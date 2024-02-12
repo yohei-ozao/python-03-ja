@@ -1,27 +1,27 @@
-# Challenge 2:  **Advanced Joins**
+# チャレンジ2:  **SQLの高度な結合 (JOIN)**
 
-## **Background & Objectives**
+## **背景と目的**
 
-This challenge focuses on mastering SQL joins in Python. Understanding different types of joins is crucial for fetching data from multiple tables. For a quick primer on SQL joins, [this Stack Overflow post](http://stackoverflow.com/questions/17946221/sql-join-and-different-types-of-joins) offers a helpful overview.
+このチャレンジの目的は、PythonでSQLの結合をマスターすることです。複数のテーブルからデータを取得するには、さまざまな種類の結合について理解する必要があります。[このStackOverflowの記事](http://stackoverflow.com/questions/17946221/sql-join-and-different-types-of-joins) (英語) を見ると、SQLの結合の概要を理解できます。
 
-We will continue using the **`chinook.db`** database. Ensure you have the database file in the **`data`** directory of this challenge.
+**`chinook.db`** データベースを引き続き使用します。このチャレンジの **`data`** ディレクトリにこのデータベースのファイルがあることを確認してください。
 
-You must complete the functions in **`advanced_joins.py`**. Each function will use a **`db`** cursor, provided as an argument, to execute SQL queries. This is a continuation of the previous exercise but with a focus on join operations.
+このチャレンジでは **`advanced_joins.py`** の関数を完成させてください。各関数では、引数として渡された **`db`** カーソルを使用してSQLクエリを実行します。これは前回の演習の続きにあたりますが、今回は結合操作を中心に取り組みます。
 
-### **Detailed Tracks**
+### **楽曲の詳細**
 
-- Implement **`detailed_tracks`** to retrieve all track names with their corresponding album titles and artist names.
-- The function should return a list of tuples like (**`track_name`**, **`album_title`**, **`artist_name`**).
+- すべての楽曲名と、それに対応するアルバムのタイトル、アーティスト名を取得する **`detailed_tracks`** 関数を実装します。
+- この関数では (**`track_name`**, **`album_title`**, **`artist_name`**) のようなタプルのリストを返すようにします。
 
-### **Tracks Not Bought**
+### **未購入の楽曲**
 
-- Implement **`tracks_not_bought`** to find tracks that have never been purchased.
-- This function should return a list of track **`titles`**.
+- まだ購入していない楽曲を検索する **`tracks_not_bought`** 関数を実装します。
+- この関数では、楽曲の **`タイトル`** のリストを返すようにします。
 
-### **Genre Statistics**
+### **ジャンルの統計情報**
 
-- Implement **`genre_stats`** to get statistics for a given genre: the number of tracks and the average track length (in seconds).
-- The function should return a dictionary like:
+- 特定のジャンルの統計情報 (楽曲数、楽曲の平均の再生時間 (秒)) を取得する **`genre_stats`** 関数を実装します。
+- この関数では、次のような辞書を返すようにします。
 
 ```python
 results = genre_stats(db, "Rock")
@@ -33,11 +33,11 @@ print(results)
 }
 ```
 
-## **Top 5 Artists by Genre**
+## **ジャンル別のトップ5アーティスト**
 
-- Implement **`top_five_artists_by_genre`** to get the top 5 artists with the most tracks in a given genre.
-- The function should return a list of tuples like (**`artist_name`**, **`number_of_tracks`**).
-- Sort ties alphabetically by artist name.
+- 特定のジャンルで楽曲数が多い上位5組のアーティストを取得する **`top_five_artists_by_genre`** 関数を実装します。
+- この関数では、(**`artist_name`**, **`number_of_tracks`**) のようなタプルのリストを返すようにします。
+- アーティスト名のアルファベット順でタイトルを並べ替えます。
 
 ```python
 results = top_five_artists_by_genre(db, "Jazz")

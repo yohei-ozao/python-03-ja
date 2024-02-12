@@ -3,40 +3,40 @@ import pandas as pd
 
 def transform_date_format(date_str):
     """
-    Transforms a date string from 'YYYY-MM-DD' format to 'DD/MM/YYYY' format.
-    If the input is not in the expected format, returns the original string.
+    日付文字列の形式を 'YYYY-MM-DD' から 'DD/MM/YYYY' に変換する
+    入力が想定された形式と異なる場合は、元の文字列を返す
     
-    Args:
-    date_str (str): A date string in 'YYYY-MM-DD' format.
+    引数:
+    date_str (文字列): 'YYYY-MM-DD' 形式の日付文字列
 
-    Returns:
-    str: The transformed date string in 'DD/MM/YYYY' format or the original string if format is invalid.
+    戻り値:
+    文字列: 'DD/MM/YYYY' 形式に変換した日付文字列、または元の文字列 (形式が無効だった場合)
     """
-    # TODO: Implement the date format transformation logic
+    # 日付形式を変換するロジックを実装してください
     pass
 
 def apply_date_transformation(db_path, table_name, column_name):
     """
-    Applies the transform_date_format function to a specified column in a SQLite table.
+    SQLiteテーブルの指定した列にtransform_date_format関数を適用する
 
-    Args:
-    db_path (str): Path to the SQLite database file.
-    table_name (str): Name of the table in the database.
-    column_name (str): Name of the column to apply the date transformation.
+    引数:
+    db_path (文字列): SQLiteデータベースへのパス
+    table_name (文字列): データベース内のテーブル名
+    column_name (文字列): 日付形式の変換を適用する列名
 
-    Returns:
-    DataFrame: A pandas DataFrame with the transformed column data.
+    戻り値:
+    DataFrame: 変換した列のデータを含むPandas DataFrame
     """
     with sqlite3.connect(db_path) as conn:
-        # TODO: Read the specified table into a DataFrame
-        # TODO: Apply the transform_date_format function to the specified column
-        # TODO: Return the modified DataFrame
+        # 指定したテーブルをDataFrameに読み込んでください
+        # 指定した列にtransform_date_format関数を適用してください
+        # 変更後のDataFrameを返してください
         pass
 
-# Example usage (To be modified by the learner)
+# 使用例 (受講者はこれを変更してください)
 if __name__ == "__main__":
     db_path = '../data/northwind.db'
-    table_name = 'Orders' # Learner to confirm or change
-    column_name = 'OrderDate' # Learner to confirm or change
+    table_name = 'Orders' # 受講者はこれを確認するか変更してください
+    column_name = 'OrderDate' # 受講者はこれを確認するか変更してください
     transformed_df = apply_date_transformation(db_path, table_name, column_name)
     print(transformed_df.head())

@@ -1,8 +1,8 @@
-# Challenge 3: Track Length Buckets
+# チャレンジ3: 楽曲の再生時間に応じたバケット分類
 
-This challenge involves categorizing the length of music tracks into buckets.
+このチャレンジでは、楽曲の再生時間に応じてバケットに分類します。
 
-- Implement **`track_length_buckets`** to categorize tracks based on their duration.
-- The width of each bucket should be **1 minute** (60000 milliseconds in the Chinook database, as track durations are stored in milliseconds).
-- For example, the bucket **1** will contain the count of all tracks with a duration between **0** and **60000** milliseconds.
-- This method should return a list of tuples like (**`max_duration_in_minutes`**, **`track_count`**).
+- 楽曲の再生時間にもとづいて分類する **`track_length_buckets`** 関数を実装します。
+- 各バケットの幅は**1分** (Chinookデータベースでは楽曲の再生時間がミリ秒単位で保存されているため60,000ミリ秒) にします。
+- たとえば、バケット**1**には、再生時間が**0**ミリ秒から**60000**ミリ秒までのすべての楽曲が入ります。
+- この関数では、(**`max_duration_in_minutes`**, **`track_count`**) のようなタプルのリストを返すようにします。

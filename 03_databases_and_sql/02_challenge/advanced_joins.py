@@ -1,39 +1,39 @@
 
-# SQL & Python with Chinook Database: Advanced Joins
+# SQLとPython＋Chinookデータベース: 高度な結合
 
 import sqlite3
 
-# Connect to the chinook.db database
+# chinook.dbデータベースに接続
 conn = sqlite3.connect('../data/chinook.db')
 db = conn.cursor()
 
-# Detailed Tracks
+# 楽曲の詳細
 def detailed_tracks(db):
-    query = ""  # Your SQL query goes here
+    query = ""  # ここにSQLクエリを書いてください
     db.execute(query)
     results = db.fetchall()
     return results
 
-# Tracks Not Bought
+# 未購入の楽曲
 def tracks_not_bought(db):
-    query = ""  # Your SQL query goes here
+    query = ""  # ここにSQLクエリを書いてください
     db.execute(query)
     results = db.fetchall()
     return results
 
-# Genre Statistics
+# ジャンルの統計情報
 def genre_stats(db, genre_name):
-    query = ""  # Your SQL query goes here
+    query = ""  # ここにSQLクエリを書いてください
     db.execute(query)
     results = db.fetchall()
     return results
 
-# Top 5 Artists by Genre
+# ジャンル別のトップ5アーティスト
 def top_five_artists_by_genre(db, genre_name):
-    query = ""  # Your SQL query goes here
+    query = ""  # ここにSQLクエリを書いてください
     db.execute(query)
     results = db.fetchall()
     return results
 
-# Don't forget to close the database connection at the end of your script
+# スクリプトの最後で必ずデータベース接続を閉じる
 conn.close()

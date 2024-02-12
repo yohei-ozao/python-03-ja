@@ -1,13 +1,13 @@
-Let's create a weather **[CLI](https://en.wikipedia.org/wiki/Command-line_interface)** utilizing the OpenWeatherMap API you saw in exercise 3. The user flow should be as follows (in pseudo-code):
+演習3で確認したOpenWeatherMap APIを使用して、天気の**[CLI](https://en.wikipedia.org/wiki/Command-line_interface)**を作成しましょう。ユーザーの操作の流れは次のようになります (擬似コード)。
 
-1. Start the app with **`python weather.py`**
-2. Prompt the user to enter a city name
-3. If the city is unknown to the API, display an error message and return to step 2.
-4. Retrieve and display the weather forecast for the next 5 days (date, weather, and maximum temperature in °C)
-5. Return to step 2 (loop to request a new city)
-6. Use **`Ctrl+C`** at any time to exit the program
+1. コマンド **`python weather.py`** でアプリを起動します。
+2. ユーザーに都市名を入力するよう促します。
+3. 入力された都市名をAPIが認識できない場合、エラーメッセージを表示してステップ2に戻ります。
+4. 今後5日間の天気予報 (日付、天気、最高気温 (°C)) を取得して表示します。
+5. ステップ2に戻ります (ユーザーに新しい都市名を入力するよう促し、この処理を繰り返します)。
+6. ユーザーが **`Ctrl+C`** キーを押したら、随時プログラムを終了します。
 
-The actual execution should resemble:
+実行結果は次のようになります。
 
 ```python
 > python weather.py
@@ -23,30 +23,30 @@ City?
 > 
 ```
 
-create a file called **`weather.py`** and create the following three functions:
+ファイル **`weather.py`** を作り、次の3つの関数を作成します。
 
 - **`search_city(query)`**
 - **`weather_forecast(lat, lon)`**
 - **`main()`**
 
-Implement them **in the specified order**. Make sure to check their functionality as you go along by running the program in the CLI with **`python weather.py`** .
+これらの関数を**以下に指定した順序**で実装します。CLIでプログラムを実行 (**`python weather.py`** を実行) し、関数の機能を確認してください。
 
-1. Begin with the **`search_city`** function, which should return a **`dictionary`** containing comprehensive information about the city, including **`lat`** and **`lon`**.
-2. Proceed to the **`weather_forecast`** function, which accepts the city's **`lat`** and **`lon`** as arguments and returns a five-day forecast (ensure the function returns a **`list`** of dictionaries). **NOTE**: OpenWeatherMap provides a forecast for every 3 hours, so you will need to refine the results to display only one forecast per day.
-3. Complete the challenge by coding the **`main`** function, which will be executed when you run the **`weather.py`** file from the terminal. Determine which functions should be called within **`main`** and the appropriate order.
+1. はじめに **`search_city`** 関数を作成します。この関数では、都市に関するさまざまな情報 (**`lat`** (緯度) や **`lon`** (経度) など) を含む **`辞書`** を返します。
+2. 次に **`weather_forecast`** 関数を作成します。この関数では、都市の **`lat`** と **`lon`** を引数として受け取り、今後5日間の天気予報を返します (関数で辞書の **`リスト`** を返すようにします)。OpenWeatherMapは3時間ごとの予報を提供するため、各日の予報 (1日につき1予報) を表示するように結果を調整する必要があります。
+3. **`main`** 関数をコーディングしてチャレンジを完了します。ターミナルから **`weather.py`** ファイルを実行すると **`main`** 関数が実行されます。**`main`** で呼び出す関数とその適切な順序を決定します。
 
-**City List**
+**都市のリスト**
 
-After **`step 3`**, if the user input is ambiguous (i.e., several cities are returned from the search), display the options and prompt the user to select one by index, as shown below:
+**`ステップ3`** の後でユーザーの入力が曖昧な場合 (検索した結果、複数の都市が返された場合など) は、次のようにオプションを表示して番号を1つ選択するようユーザーに促します。
 
 ```
 City?
 > Pari
-1. Paris,FR
-2. Paris,FR
-3. Paris,FR
-4. Pari,IT
-5. Puri,IN
+1.Paris,FR
+2.Paris,FR
+3.Paris,FR
+4.Pari,IT
+5.Puri,IN
 Multiple matches found, which city did you mean?
 > 1
 2022-09-26: Clouds (12°C)
@@ -56,6 +56,6 @@ Multiple matches found, which city did you mean?
 2022-09-30: Clear (10°C)
 ```
 
-💡 **Hint 1:** The built-in **[enumerate()](https://docs.python.org/3/library/functions.html#enumerate)** function could be helpful.
+💡 **ヒント1**: 組み込みの **[enumerate()](https://docs.python.org/3/library/functions.html#enumerate)** 関数が役立ちます。
 
-💡 **Hint 2:** By default, the API does not return multiple options for a given query **`q`**. Add the **`limit=`** parameter to your URL to ensure that the API returns the specified number of options (e.g.  `**https://api.openweathermap.org/geo/1.0/direct?q=Barcelona&limit=5&appid=XXXXXXXXXXX**` will return 5 options for Barcelona, if available).
+💡 **ヒント2**: デフォルトでは、APIは特定のクエリ **`q`** に対して複数のオプションを返すことはありません。指定した数のオプションをAPIが返すようにするには、URLに **`limit=`** パラメータを追加します (例: **`https://api.openweathermap.org/geo/1.0/direct?q=Barcelona&limit=5&appid=XXXXXXXXXXX`** とすると、バルセロナに関する5つのオプションを返します)。

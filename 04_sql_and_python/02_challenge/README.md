@@ -1,24 +1,24 @@
-We will work with the northwind.db database, which you should have set up in your environment.
+環境内にセットアップされているnorthwind.dbデータベースを使用します。
 
-Specs
-Open the file queries.py to answer the following questions. You can explore the database using tools like DBeaver to better understand its structure.
+詳細
+queries.pyを開き、次の問題に答えてください。DBeaverなどのツールでデータベースを調査すると、構造を深く理解できます。
 
-There are three methods to implement, focusing on the Orders, OrderDetails, and Products tables:
+Orders、OrderDetails、Productsの各テーブルを参照し、3つのメソッドを実装します。
 
-Implement query_orders to retrieve all orders sorted by OrderID in ascending order.
+query_ordersの実装: すべての注文を取得し、OrderIDの昇順で並べ替えてください。
 
-Implement get_orders_range to fetch all orders placed within a specific date range, sorted by OrderDate in ascending order. This method should take two dates as parameters (date_from and date_to) and include orders on date_to but exclude those on date_from.
+get_orders_rangeの実装: 特定の期間に発生したすべての注文を取得し、OrderDateの昇順で並べ替えてください。このメソッドでは2つの日付 (date_fromとdate_to) を引数に取り、date_toの日付の注文は含めますがdate_fromの日付の注文は除外します。
 
-Implement get_order_details to obtain details of each order, including the product name and quantity ordered. The results should be sorted by OrderID in ascending order.
+get_order_detailsの実装: 各注文の詳細情報 (商品名や注文数など) を取得し、OrderIDの昇順で並べ替えてください。
 
-👉 Reminder: Each method accepts a db argument, a database connection, where you can use the execute method. This connection is provided by the test framework, so you don't need to establish it yourself. Your methods should follow this structure:
+👉 注意: 各メソッドはdb (データベース接続) を引数に取ります。この引数にはexecuteメソッドを使用できます。この接続はテストのフレームワークで提供されるため、自分で接続する必要はありません。各メソッドを次の構成で書いてください。
 
 def the_method(db):
     results = db.execute("YOUR SQL QUERY")
     results = results.fetchall()
-    # results are in a list of rows, each row is a list of column values
-    print(results) # Always inspect the results to ensure correctness!
-    # Then return the appropriate value
+    # 結果は行のリストであり、各行は列の値のリストです。
+    print(results) # 結果が正しいかどうか常に確認してください。
+    # 適切な値を返します。
     return ?
 
-Hint: You can use F-strings to insert arguments into strings. This may help you insert your data arguments into your SQL query. 
+ヒント: f文字列を使用すると、文字列に引数を挿入できます。SQLクエリにデータ引数を挿入する場合にも役立ちます。 

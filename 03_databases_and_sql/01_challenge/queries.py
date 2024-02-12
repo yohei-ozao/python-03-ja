@@ -1,46 +1,46 @@
 
-# SQL & Python with Chinook Database
+# SQLとPython＋Chinookデータベース
 
 import sqlite3
 
-# Connect to the chinook.db database
+# chinook.dbデータベースに接続
 conn = sqlite3.connect('../data/chinook.db')
 db = conn.cursor()
 
-# Number of Artists
+# アーティストの数
 def number_of_artists(db):
-    query = ""  # Your SQL query goes here
+    query = ""  # ここにSQLクエリを書いてください
     db.execute(query)
     results = db.fetchall()
     return results
 
-# List of Artists
+# アーティストのリスト
 def list_of_artists(db):
-    query = ""  # Your SQL query goes here
+    query = ""  # ここにSQLクエリを書いてください
     db.execute(query)
     results = db.fetchall()
     return results
 
-# List of Albums About “Love”
+# 「愛」をテーマにしたアルバムのリスト
 def albums_about_love(db):
-    query = ""  # Your SQL query goes here
+    query = ""  # ここにSQLクエリを書いてください
     db.execute(query)
     results = db.fetchall()
     return results
 
-# Number of Tracks Longer Than a Given Duration
+# 指定された再生時間よりも長い楽曲数
 def tracks_longer_than(db, duration):
-    query = ""  # Your SQL query goes here
+    query = ""  # ここにSQLクエリを書いてください
     db.execute(query)
     results = db.fetchall()
     return results
 
-# List of Genres with Most Tracks
+# 最も楽曲数が多いジャンルのリスト
 def genres_with_most_tracks(db):
-    query = ""  # Your SQL query goes here
+    query = ""  # ここにSQLクエリを書いてください
     db.execute(query)
     results = db.fetchall()
     return results
 
-# Don't forget to close the database connection at the end of your script
+# スクリプトの最後で必ずデータベース接続を閉じる
 conn.close()

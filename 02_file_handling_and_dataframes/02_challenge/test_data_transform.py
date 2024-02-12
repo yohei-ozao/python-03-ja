@@ -12,7 +12,7 @@ class TestReadCSV(unittest.TestCase):
         with self.assertRaises(FileNotFoundError):
             read_csv('nonexistent.csv')
 
-# Similar test classes for csv_to_json, write_json, read_json, json_to_csv, write_csv, validate_data, process_directory
+# csv_to_json、write_json、read_json、json_to_csv、write_csv、validate_data、process_directory用の類似したテストクラス
 
 class TestCsvToJson(unittest.TestCase):
     def test_valid_csv_to_json(self):
@@ -54,7 +54,7 @@ class TestValidateData(unittest.TestCase):
         self.assertTrue(result)
 
 class TestProcessDirectory(unittest.TestCase):
-    # This test depends on the implementation of process_directory
+    # このテストはprocess_directoryの実装によって異なる
     pass
 
 if __name__ == '__main__':
