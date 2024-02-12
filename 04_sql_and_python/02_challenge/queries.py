@@ -28,7 +28,7 @@ def get_orders_range(db, date_from, date_to):
     引数:
         db: データベース接続オブジェクト
         date_from: 開始日 (この日は含めない)
-        date_to: 開始日 (この日は含める)
+        date_to: 開始日 (この日を含める)
 
     戻り値:
         注文を表すタプルのリスト

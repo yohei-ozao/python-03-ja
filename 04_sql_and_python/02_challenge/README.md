@@ -13,6 +13,7 @@ get_order_detailsの実装: 各注文の詳細情報 (商品名や注文数な�
 
 👉 注意: 各メソッドはdb (データベース接続) を引数に取ります。この引数にはexecuteメソッドを使用できます。この接続はテストのフレームワークで提供されるため、自分で接続する必要はありません。各メソッドを次の構成で書いてください。
 
+```python
 def the_method(db):
     results = db.execute("YOUR SQL QUERY")
     results = results.fetchall()
@@ -20,5 +21,6 @@ def the_method(db):
     print(results) # 結果が正しいかどうか常に確認してください。
     # 適切な値を返します。
     return ?
+```
 
 ヒント: f文字列を使用すると、文字列に引数を挿入できます。SQLクエリにデータ引数を挿入する場合にも役立ちます。 

@@ -1,4 +1,4 @@
-演習3で確認したOpenWeatherMap APIを使用して、天気の**[CLI](https://en.wikipedia.org/wiki/Command-line_interface)**を作成しましょう。ユーザーの操作の流れは次のようになります (擬似コード)。
+演習3で確認したOpenWeatherMap APIを使用して、天気の **[CLI](https://en.wikipedia.org/wiki/Command-line_interface)** を作成しましょう。ユーザーの操作の流れは次のようになります (擬似コード)。
 
 1. コマンド **`python weather.py`** でアプリを起動します。
 2. ユーザーに都市名を入力するよう促します。
@@ -42,11 +42,11 @@ City?
 ```
 City?
 > Pari
-1.Paris,FR
-2.Paris,FR
-3.Paris,FR
-4.Pari,IT
-5.Puri,IN
+1. Paris,FR
+2. Paris,FR
+3. Paris,FR
+4. Pari,IT
+5. Puri,IN
 Multiple matches found, which city did you mean?
 > 1
 2022-09-26: Clouds (12°C)
