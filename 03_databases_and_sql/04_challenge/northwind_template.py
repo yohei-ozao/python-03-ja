@@ -1,47 +1,47 @@
-# SQL & Python with Northwind Database
+# SQLとPython＋Northwindデータベース
 
 import sqlite3
 
-# Connect to the northwind.db database
+# northwind.dbデータベースに接続
 conn = sqlite3.connect('../data/northwind.db')
 db = conn.cursor()
 
-# List of Suppliers
+# サプライヤーのリスト
 def list_of_suppliers(db):
-    query = ""  # Your SQL query goes here
+    query = ""  # ここにSQLクエリを書いてください
     db.execute(query)
     results = db.fetchall()
     return results
 
-# Small Orders
+# 少量の注文
 def count_small_orders(db):
-    query = ""  # Your SQL query goes here
+    query = ""  # ここにSQLクエリを書いてください
     db.execute(query)
     result = db.fetchone()
     return result[0] if result else 0
 
-# First Ten Products
+# 最初の10商品
 def first_ten_products(db):
-    query = ""  # Your SQL query goes here
+    query = ""  # ここにSQLクエリを書いてください
     db.execute(query)
     results = db.fetchall()
     return results
 
-# Products with a Keyword
+# キーワードを含む商品
 def products_with_keyword(db, keyword):
-    query = ""  # Your SQL query goes here
+    query = ""  # ここにSQLクエリを書いてください
     db.execute(query)
     results = db.fetchall()
     return results
 
-# Top 5 Categories by Product Count
+# 商品数が多いトップ5のカテゴリー
 def top_five_categories_by_product_count(db):
-    query = ""  # Your SQL query goes here
+    query = ""  # ここにSQLクエリを書いてください
     db.execute(query)
     results = db.fetchall()
     return results
 
-# Example function calls (comment these out before distributing)
+# 関数呼び出しの例 (提出する前にこれらをコメントアウトしてください)
 # print("List of Suppliers:")
 # print(list_of_suppliers(db))
 
@@ -54,5 +54,5 @@ def top_five_categories_by_product_count(db):
 # print("\nTop 5 Categories by Product Count:")
 # print(top_five_categories_by_product_count(db))
 
-# Don't forget to close the database connection at the end of your script
+# スクリプトの最後で必ずデータベース接続を閉じる
 conn.close()

@@ -1,13 +1,13 @@
-## Live Challenge: Advanced DataFrame Operations
+## ライブチャレンジ: DataFrameの高度な操作
 
-**Objective:** Perform advanced data manipulation and querying on a dataset of your choice from scikit-learn’s sample datasets. 
+**目的**: scikit-learnのサンプルデータセットの中から選択したデータセットに対して、高度なデータ操作とクエリを実行します。 
 
 https://scikit-learn.org/stable/modules/classes.html#module-sklearn.datasets
 
-**Tasks:**
+**タスク**
 
-1. **Custom Indexing:** Implement custom indexing to gain useful insights from the data
-2. **Complex Filtering:** Create functions for complex filtering operations, like multi-column conditions or range queries.
-3. **Data Transformation:** Apply transformations to the data, such as creating new columns with valuable observations or descriptive statistics.
-4. **Data Summarization:** Groups, aggregates or pivot the data in order to give greater insight into the data
-5. **********Communicate:********** Be ready to communicate about your observations and findings.
+1. **カスタムインデックスの設定**: データから有用なインサイトを得るために、カスタムインデックスを設定します。
+2. **複雑なフィルタリング**: 複数列の条件指定や範囲指定クエリのような複雑なフィルタリング操作のための関数を作成します。
+3. **データ変換**: データ変換を適用します (例: 有益な観察情報や基本統計量を保存する新しい列を作成する)。
+4. **データの要約**: データをより深く理解するために、データのグループ化、集計、ピボット処理を行います。
+5. **コミュニケーション**: 意見やわかったことを伝える準備をしてください。

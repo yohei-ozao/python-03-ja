@@ -1,29 +1,29 @@
-Challenge 1: Date Format Transformation
+チャレンジ1: データ形式の変換
 
-Objective:
-Develop a custom function to transform the date format in the OrderDate column of the Orders table in the northwind.db database.
+目的: 
+カスタム関数を作成して、northwind.dbデータベースのOrdersテーブルにあるOrderDate列の日付形式を変換します。
 
-Specific Task for Learners:
-Transformation Function:
+具体的なタスク: 
+データ形式を変換する関数の作成
 
-Create a function named transform_date_format.
-The function should take a date string in the format YYYY-MM-DD and convert it to the format DD/MM/YYYY.
+transform_date_formatという名前の関数を作成します。
+この関数はYYYY-MM-DD形式の日付文字列を受け取り、DD/MM/YYYY形式に変換します。
 
-If the input is not a valid date, the function should return the original input.
+入力が有効な日付でない場合は、元の入力を返します。
 
-Application of Function:
+関数の適用
 
-Implement the function apply_date_transformation to apply transform_date_format to the OrderDate column of the Orders table.
-This function must connect to the SQLite database, transform the specified column, and return the modified DataFrame.
+OrdersテーブルのOrderDate列にtransform_date_formatを適用するapply_date_transformation関数を実装します。
+この関数はSQLiteデータベースに接続し、指定された列を変換した後、変更したDataFrameを返します。
 
-Expected Outcome:
+想定される出力
 
-- The OrderDate column in the returned DataFrame should have dates in the DD/MM/YYYY format.
-- Other columns and rows should remain unchanged.
+- DataFrameのOrderDate列をDD/MM/YYYY形式の日付にして返します。
+- その他の列や行は変更しないでください。
 
-Instructions for Learners:
+説明
 
-You are provided with a template file (date_transformation.py) where you can implement your transformation logic.
-Your task is to write the transform_date_format function and use it in the apply_date_transformation function to modify the OrderDate column in the Orders table.
+変換ロジックを実装するためのテンプレートファイル (date_transformation.py) を用意してあります。
+transform_date_format関数を記述し、これをapply_date_transformation関数で使用してOrdersテーブルのOrderDate列を変更します。
 
-Use the provided test file (date_transformation_test.py) to ensure your function behaves as expected.
+用意されているテストファイル (date_transformation_test.py) を使用して、関数が想定どおりに動作することを確認してください。

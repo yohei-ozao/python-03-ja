@@ -1,23 +1,23 @@
-# Challenge 4: Live Recap
+# チャレンジ4: まとめ (ライブ)
 
-## **All Suppliers**
+## **すべてのサプライヤー**
 
-Write a SQL query to fetch a list of all the supplier names from the Northwind database. Fetch only the supplier names, not all the columns.
+Northwindデータベースからすべてのサプライヤー名のリストを取得するSQLクエリを記述してください。すべての列ではなくサプライヤー名のみを取得してください。
 
-## **Small Orders**
+## **少量の注文**
 
-Count the number of orders in the database that have fewer than 5 items in total. You'll need to use the **`Orders`** and **`OrderDetails`** tables and sum the quantities for each order. The goal is to get an integer, not a tuple.
+データベースにある注文のうち商品数が5点に満たない注文の数をカウントしてください。**`Orders`** テーブルと **`OrderDetails`** テーブルを使用して、各注文の商品数を合計する必要があります。タプルではなく整数を取得することが目的です。
 
-## **First Ten Products**
+## **最初の10商品**
 
-Retrieve the first ten products from the Northwind database, sorted alphabetically by product name.
+Northwindデータベースから最初の10商品を取得し、商品名のアルファベット順で並べ替えてください。
 
-## **Products with a Keyword**
+## **キーワードを含む商品**
 
-Fetch product and supplier information for products containing a given keyword in their name (case insensitive). You'll need to join the **`Products`** and **`Suppliers`** tables.
+指定したキーワードを名前に含む商品について、商品とサプライヤーの情報を取得してください (大文字と小文字は区別します)。**`Products`** テーブルと **`Suppliers`** テーブルを結合する必要があります。
 
-## **Top 5 Categories by Product Count**
+## **商品数が多いトップ5のカテゴリー**
 
-Write a function that takes a string argument, **`categoryName`**, and finds the top five categories with the most products. Use SQL to build your query step by step.
+文字列型の引数 **`categoryName`** を取り、商品数が多いトップ5のカテゴリーを求める関数を記述してください。SQLを使用して段階的にクエリを作成してください。
 
-These challenges will help you explore the Northwind database's structure and practice SQL queries in a different context.
+このチャレンジは、Northwindデータベースの構造を理解してさまざまなSQLクエリを書く練習になります。

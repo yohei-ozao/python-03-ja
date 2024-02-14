@@ -1,50 +1,50 @@
-## **Challenge 3: Iris Dataset Exploration and Feature Engineering with Pandas**
+## **チャレンジ3: Pandasによるアイリスのデータセットの探索と特徴量エンジニアリング**
 
-**Objective:** Deepen your understanding of data manipulation, feature engineering, and analysis using Pandas by exploring and enhancing the Iris dataset.
+**目的**: アイリスのデータセットの探索と拡張を通じて、Pandasを使用したデータ操作、特徴量エンジニアリング、分析について理解を深めます。
 
-**Overview:**
-The Iris dataset is a classic dataset used in machine learning and statistics. It consists of 150 observations of iris flowers, including measurements of sepal length, sepal width, petal length, and petal width, along with the species classification. The species include Iris Setosa, Iris Versicolour, and Iris Virginica.
+**概要**: 
+アイリスのデータセットは、機械学習や統計学の分野で従来から使われています。150種類のアイリスの花の観察結果 (ガクの長さ、ガクの幅、花弁の長さ、花弁の幅の測定値など) と、品種の分類で構成されています。品種には、アイリス・セトーサ (Iris Setosa)、アイリス・バーシコラー (Iris Versicolour)、アイリス・ヴァージニカ (Iris Virginica) などがあります。
 
-**Tasks:**
+**タスク**
 
-1. **Data Loading and Overview:**
-    - Load the Iris dataset into a DataFrame (instructions below).
-    - Display the first 5 rows for an overview.
-2. **Data Cleaning and Validation:**
-    - Ensure there are no missing or null values.
-    - Check data types of each column (e.g., numeric types for measurements).
-3. **Basic Analysis and Descriptive Statistics:**
-    - Compute basic descriptive statistics (mean, median, standard deviation) for each numeric feature.
-    - Create a new DataFrame where each row corresponds to a feature and columns contain the calculated statistics. Output this as a CSV.
-4. **Feature Engineering:**
-    - Add a new column **`sepal_area`** calculated as sepal length × sepal width.
-    - Add another column **`petal_area`** calculated as petal length × petal width.
-    - Calculate descriptive statistics for these new features and add them to the statistics DataFrame.
-5. **Filtering Data:** 
-    1. Write a function to filter the data based on given criteria (e.g., filter out rows where a certain column's value is below a threshold).
-6. **Export your data:**
-    1. Save your dataframe as a CSV. 
-    2. Although the output of this challenge will not be autograded, we request that you include your own dataframe when you push to github. 
+1. **データの読み込みと概要**
+    - アイリスのデータセットをDataFrameに読み込みます (以下に手順を記載)。
+    - 概要として最初の5行を表示します。
+2. **データのクリーニングと検証**
+    - 欠損値またはnull値の存在を確認します。
+    - 各列のデータ型を確認します (例: 測定値の場合は数値型)。
+3. **基本的な分析と基本統計量**
+    - 数値型の各特徴量について、基本統計量 (平均値、中央値、標準偏差) を計算します。
+    - DataFrameを新規作成します。各行が1つの特徴量を表し、各列に計算した統計情報を格納するようにします。これをCSV形式で出力します。
+4. **特徴量エンジニアリング**
+    - 新しい列 **`sepal_area`** (ガクの面積) を追加します。この値は、ガクの長さ×ガクの幅で算出します。
+    - 別の列 **`petal_area`** (花弁の面積) も追加します。この値は、花弁の長さ×花弁の幅で算出します。
+    - これらの新しい特徴量の基本統計量を算出し、統計情報のDataFrameに追加します。
+5. **データのフィルタリング** 
+    1. 与えられた基準にもとづいてデータをフィルタリングする関数を書きます (例: ある列の値がしきい値を下回る行を除外する)。
+6. **データのエクスポート**
+    1. DataFrameをCSV形式で保存します。 
+    2. このチャレンジの成果物は自動採点されませんが、GitHubにプッシュする際に自分のDataFrameを含めるようにしてください。 
 
-### Loading the Iris Dataset
+### アイリスのデータセットの読み込み
 
-**Data Loading:**
+**データの読み込み**
 
-- Install **`scikit-learn`** if it's not already installed, using **`!pip install scikit-learn`**.
-- Load the Iris dataset from **`sklearn.datasets`**.
+- **`pip install scikit-learn`** コマンドを使用して **`scikit-learn`** をインストールします (まだインストールしていない場合)。
+- **`sklearn.datasets`** からアイリスのデータセットを読み込みます。
 
 ```python
-# Import necessary libraries
+# 必要なライブラリをインポートする
 import pandas as pd
 from sklearn import datasets
 
-# Load Iris dataset and convert to dataframe
+# アイリスのデータセットを読み込み、DataFrameに変換する
 iris = datasets.load_iris()
 iris_df = pd.DataFrame(iris.data, columns=iris.feature_names)
 
-# Add the species column, numbers 0-2 each represent a different species
+# 品種の列を追加し、0～2の番号を記入する (各番号が異なる品種を表す)
 iris_df['species'] = iris.target
 ```
 
-- Learn more about the dataset here:
+- アイリスのデータセットに関する詳細情報
     - https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html

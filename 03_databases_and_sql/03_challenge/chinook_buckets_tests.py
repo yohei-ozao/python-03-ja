@@ -2,11 +2,11 @@
 import sqlite3
 from chinook_buckets import *
 
-# Connect to the chinook.db database
+# chinook.dbデータベースに接続
 conn = sqlite3.connect('../data/chinook.db')
 db = conn.cursor()
 
-# Test for Track Length Buckets
+# track_length_bucketsのテスト
 def test_track_length_buckets():
     buckets = track_length_buckets(db)
     assert isinstance(buckets, list), "Should return a list."
@@ -14,7 +14,7 @@ def test_track_length_buckets():
     for bucket in buckets:
         assert isinstance(bucket, tuple) and len(bucket) == 2, "Each bucket should be a tuple with 2 elements."
 
-# Running the tests
+# テストを実行
 test_track_length_buckets()
 
 print("All tests passed for Chinook challenges!")

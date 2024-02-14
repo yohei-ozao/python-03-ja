@@ -1,54 +1,54 @@
-## 1. Employee Age Analysis:
+## 1. 従業員の年齢分析
 
-Objective: Analyze and summarize the age distribution of employees.
+目的: 従業員の年齢分布を分析してまとめます。
 
-- Data Source: The Employees table from the Northwind database.
-- Tasks:
-    - Calculate the current age of each employee.
-    - Compute and display the average, median, mode, and standard deviation of the employees' ages.
-- Key Skills: Database interaction, datetime manipulation, statistical analysis.
+- データソース: NorthwindデータベースのEmployeesテーブル
+- タスク
+    - 各従業員の現在の年齢を計算します。
+    - 従業員の年齢の平均値、中央値、最頻値、標準偏差を計算して表示します。
+- 主なスキル: データベースの操作、日付と時間の操作、統計分析
 
-## 2. Customer Geography Analysis:
+## 2. 顧客の所在国の分析
 
-Objective: Examine the geographic distribution of customers.
+目的: 顧客の所在国を調査します。
 
-- Data Source: The Customers table from the Northwind database.
-- Tasks:
-    - Group customers by country.
-    - Calculate and display the total number of customers in each country.
-    - Identify the country with the maximum and minimum number of customers.
-- Key Skills: Database querying, data grouping, basic data analysis.
+- データソース: NorthwindデータベースのCustomersテーブル
+- タスク
+    - 顧客を国別にグループ化します。
+    - 各国の顧客数の合計を計算して表示します。
+    - 顧客数が最大の国と最小の国を特定します。
+- 主なスキル: データベースのクエリ、データのグループ化、基本的なデータ分析
 
-## 3. Order Timeframe Insights:
+## 3. 注文の間隔に関するインサイト
 
-Objective: Gain insights into the time intervals between orders.
+目的: 注文の間隔に関するインサイトを取得します。
 
-- Data Source: The Orders table from the Northwind database.
-- Tasks:
-    - Convert the order dates into a datetime format.
-    - Calculate the average time interval between consecutive orders.
-    - Provide a descriptive statistical summary of the order dates.
-- Key Skills: Time series analysis, statistical summary techniques.
+- データソース: NorthwindデータベースのOrdersテーブル
+- タスク
+    - 注文の日付をdatetime形式に変換します。
+    - 注文の間隔 (例: 前回の注文から今回の注文までの期間) の平均を計算します。
+    - 注文の日付に関する基本統計量を提示します。
+- 主なスキル: 時系列分析、基本統計量の取得
 
-## 4. Supplier Product Price Comparison:
+## 4. サプライヤーの商品価格の比較
 
-Objective: Compare and analyze product prices across different suppliers.
+目的: サプライヤー間で商品価格を比較して分析します。
 
-- Data Source: The Products and Suppliers tables from the Northwind database.
-- Tasks:
-    - Merge the two tables based on the SupplierID.
-    - Calculate the average price of products for each supplier.
-    - Display the average prices to identify any patterns or trends.
-- Key Skills: Data merging, aggregation, comparative analysis.
+- データソース: NorthwindデータベースのProductsテーブルとSuppliersテーブル
+- タスク
+    - SupplierIDにもとづいて2つのテーブルをマージします。
+    - サプライヤーごとに商品の平均価格を計算します。
+    - 平均価格を表示してパターンや傾向を特定します。
+- 主なスキル: データのマージ、集計、比較分析
 
-## 5. Comparative Analysis: Order Date and Quantity Correlation
+## 5. 比較分析: 注文日と注文数の関係
 
-Objective: Explore the relationship between order dates and quantities ordered.
+目的: 注文日と注文数の関係を調べます。
 
-- Data Source: The Orders and OrderDetails tables from the Northwind database.
-- Tasks:
-    - Merge data from both tables based on OrderID.
-    - Analyze the correlation between order dates and quantities, such as average quantity ordered per month or year.
-- Key Skills: Data merging, datetime analysis, correlation analysis.
+- データソース: NorthwindデータベースのOrdersテーブルとOrderDetailsテーブル
+- タスク
+    - OrderIDにもとづいて両テーブルのデータをマージします。
+    - 各月や各年の平均注文数など、注文日と注文数の関係を分析します。
+- 主なスキル: データのマージ、日時分析、相関分析
 
-These challenges encompass a range of data manipulation and analysis techniques, utilizing Python and Pandas, and are aimed at developing practical skills in handling real-world datasets.
+これらのチャレンジにはPythonとPandasを利用したさまざまなデータ操作と分析手法が含まれており、実際のデータセットを扱う実践的スキルを身に付けることを目的としています。
