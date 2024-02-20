@@ -47,4 +47,4 @@ iris_df['species'] = iris.target
 ```
 
 - アイリスのデータセットに関する詳細情報
-    - https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
+    - https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html (英語)
