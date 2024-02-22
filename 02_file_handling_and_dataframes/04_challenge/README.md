@@ -2,7 +2,7 @@
 
 **目的**: scikit-learnのサンプルデータセットの中から選択したデータセットに対して、高度なデータ操作とクエリを実行します。 
 
-https://scikit-learn.org/stable/modules/classes.html#module-sklearn.datasets
+https://scikit-learn.org/stable/modules/classes.html#module-sklearn.datasets (英語)
 
 **タスク**
 
